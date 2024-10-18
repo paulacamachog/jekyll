@@ -1,0 +1,63 @@
+¡body {
+    background-color: #ffffff; 
+    font-family: 'Times New Roman', serif; 
+    color: #333; 
+}
+
+.forum-section {
+    background-image: url('/image/lluvia-estrellas_98.webp'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.forum-header {
+    text-align: center;
+    font-size: 2.5em;
+    color: #305997;
+    text-transform: uppercase; 
+    letter-spacing: 2px; 
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    border-bottom: 3px solid #305997; 
+    padding-bottom: 10px;
+    font-family: 'Arial', sans-serif; 
+}
+
+.forum-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.forum-item {
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: 1px solid #555;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Times New Roman', serif; 
+}
+
+.forum-item:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: scale(1.02);
+}
+
+/* Estilos para los enlaces del foro */
+.forum-link {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: white !important; 
+    transition: color 0.3s;
+    font-family: 'Times New Roman', serif; 
+}
+
+.forum-link:hover {
+    color: #305997 !important; 
+}

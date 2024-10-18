@@ -1,16 +1,94 @@
-<article>
-    <h1>{{ page.title }}</h1>
-    <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
-    <div class="post-content">
-        {{ content }}
-    </div>
-</article>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} | Stellar Forum</title>
+    <link rel="stylesheet" href="/assets/main.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="wrapper">
+            <a class="site-title" rel="author" href="/">Stellar Forum</a>
+            <nav class="site-nav">
+                <div class="trigger">
+                    <a class="page-link" href="/about/">Sobre Nosotros</a>
+                    <a class="page-link" href="/forum.html">Foro</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <style>
+        .comments-section {
+            background-color: #f9f9f9; 
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-<script src="https://utteranc.es/client.js"
-        repo="paulacamachog/jekyll"
-        issue-term="pathname"
-        label="💬✨"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+        .comments-section h2 {
+            font-size: 1.5em;
+            color: #16325B; 
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .utterances {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+    </style>
+
+    <main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article>
+                <h1>{{ page.title }}</h1>
+                <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
+                <div class="post-content">
+                    {{ content }}
+                </div>
+            </article>
+
+            <!-- Utterances -->
+            <section class="comments-section">
+                <h2>Comentarios</h2>
+                <script src="https://utteranc.es/client.js"
+                        repo="paulacamachog/jekyll"
+                        issue-term="pathname"
+                        label="💬✨"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer h-card">
+        <div class="wrapper">
+            <h2 class="footer-heading">Stellar Forum</h2>
+            <div class="footer-col-wrapper">
+                <div class="footer-col footer-col-1">
+                    <ul class="contact-list">
+                        <li class="p-name">Stellar Forum</li>
+                        <li><a class="u-email" href="mailto:triplebyte@gmail.com">triplebyte@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-2">
+                    <ul class="social-media-list">
+                        <li><a href="https://github.com/jekyll"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">jekyll</span></a></li>
+                        <li><a href="https://www.twitter.com/jekyllrb"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">jekyllrb</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-3">
+                    <p>Explora los misterios del universo con un enfoque en las estrellas, constelaciones y el futuro de la exploración espacial.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
