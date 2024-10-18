@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Foro de Discusión"
+---
+
+<h1>Foro de Discusión</h1>
+
+<!-- Mostrar todos los posts como discusiones -->
+<h2>Discusiones</h2>
+<ul>
+    {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <p>{{ post.excerpt | markdownify }}</p>
+        </li>
+    {% endfor %}
+</ul>
+
+<!-- Formulario para agregar una nueva discusión -->
+<h2>Agregar una Nueva Discusión</h2>
+<form action="/ruta-del-servidor" method="POST">
+    <label for="titulo">Título de la Discusión:</label><br>
+    <input type="text" id="titulo" name="titulo" required><br><br>
+
+    <label for="contenido">Contenido:</label><br>
+    <textarea id="contenido" name="contenido" rows="4" cols="50" required></textarea><br><br>
+
+    <input type="submit" value="Agregar Discusión">
+</form>
