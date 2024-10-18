@@ -1,29 +1,16 @@
----
-layout: default
----
-
 <article>
     <h1>{{ page.title }}</h1>
     <p><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
     <div class="post-content">
         {{ content }}
     </div>
-
-    <h2>Comentarios</h2>
-    <ul>
-        <!-- Comentarios simulados -->
-        <li><strong>Juan</strong>: ¡Muy interesante la discusión sobre Ruby!</li>
-        <li><strong>María</strong>: Me gustaría saber más sobre las gemas en Ruby.</li>
-    </ul>
-
-    <h3>Agregar un comentario</h3>
-    <form action="#" method="POST">
-        <label for="author">Nombre:</label><br>
-        <input type="text" id="author" name="author" required><br><br>
-
-        <label for="comment">Comentario:</label><br>
-        <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-
-        <input type="submit" value="Enviar comentario">
-    </form>
 </article>
+
+<script src="https://utteranc.es/client.js"
+        repo="paulacamachog/jekyll"
+        issue-term="pathname"
+        label="💬✨"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
